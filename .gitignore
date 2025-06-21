@@ -1,0 +1,9 @@
+# 构建输出
+build/
+.gradle/
+
+# IDE相关
+.idea/
+
+# 操作系统文件
+.DS_Store
