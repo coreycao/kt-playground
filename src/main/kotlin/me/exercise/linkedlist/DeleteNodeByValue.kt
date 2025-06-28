@@ -50,7 +50,7 @@ fun <T : Comparable<T>> deleteNodeByValueWithQueue(head: Node<T>?, target: T): N
         current = current.next
     }
 
-    if (queue.isEmpty) return null
+    if (queue.isEmpty()) return null
 
     val ret = queue.removeLast()
     current = ret

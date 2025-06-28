@@ -21,7 +21,7 @@ fun <E> getAndRemoveLast(stack: ArrayDeque<E>): E {
 }
 
 fun <T> reverseStackByRecursion(stack: ArrayDeque<T>) {
-    if (stack.isEmpty){
+    if (stack.isEmpty()){
         return
     }
     // 递归二：不断递归地拿到栈底元素，此时栈内元素全部暂存于 reverse 函数的调用栈中，递归回溯的过程中将“暂存”的栈底元素 push 到原栈中，实现逆序

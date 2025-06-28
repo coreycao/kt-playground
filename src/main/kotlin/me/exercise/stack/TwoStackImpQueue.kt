@@ -13,7 +13,7 @@ class DoubleStackQueue<T> {
 
     // 出队时，直接从 outStack 中弹出元素，如果 outStack 为空，那么将 inStack 全部弹出并压入 outStack
     fun dequeue(): T {
-        if (outStack.isEmpty) {
+        if (outStack.isEmpty()) {
             while (inStack.isNotEmpty()) {
                 outStack.addFirst(inStack.removeFirst())
             }
@@ -22,7 +22,7 @@ class DoubleStackQueue<T> {
     }
 
     fun isEmpty(): Boolean {
-        return inStack.isEmpty && outStack.isEmpty
+        return inStack.isEmpty() && outStack.isEmpty()
     }
 }
 

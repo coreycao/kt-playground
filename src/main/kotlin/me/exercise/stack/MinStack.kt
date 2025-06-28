@@ -16,7 +16,7 @@ class MinStack<T : Comparable<T>> {
 
     fun push(t: T) {
         rawStack.addFirst(t)
-        if (minStack.isEmpty) {
+        if (minStack.isEmpty()) {
             minStack.addFirst(t)
         } else if (min() != null && t <= min()!!) {
             minStack.addFirst(t)
@@ -32,7 +32,7 @@ class MinStack<T : Comparable<T>> {
     }
 
     fun isEmpty(): Boolean {
-        return rawStack.isEmpty
+        return rawStack.isEmpty()
     }
 
     fun min(): T? {
