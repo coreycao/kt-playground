@@ -4,14 +4,10 @@ fun main() {
     val array = arrayOf(26, 19, 7, 37, 27, 57, 67, 99, 87, 17)
 
     println("before: ")
-    array.forEach {
-        print("$it ")
-    }
-    println("\nafter: ")
+    array.print()
+    println("after: ")
     quickSort(array)
-    array.forEach {
-        print("$it ")
-    }
+    array.print()
 }
 
 /**
@@ -54,9 +50,10 @@ private fun <T : Comparable<T>> partition(array: Array<T>, left: Int, right: Int
     // 如果迭代到的元素小于标准值 pivot，那么将其放到已处理区间的末尾，也就是 i 的位置上
     for (j in left until right) {
         if (array[j] < pivot) {
-            var tmp = array[i]
+            /*var tmp = array[i]
             array[i] = array[j]
-            array[j] = tmp
+            array[j] = tmp*/
+            array.swap(i, j)
             i++
         }
     }
