@@ -1,8 +1,5 @@
 package me.exercise.linkedlist
 
-
-
-
 /**
  * 打印链表
  */
@@ -35,9 +32,7 @@ fun <T> Array<T>.toLinkedList(): Node<T>? {
 /**
  * Node for LinkedList
  */
-class Node<T>(var value: T) {
-
-    var next: Node<T>? = null
+class Node<T>(var value: T, var next: Node<T>? = null) {
 
     // data for test
     companion object {
