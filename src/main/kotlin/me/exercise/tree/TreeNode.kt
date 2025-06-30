@@ -78,7 +78,7 @@ class TreeNode<T>(
          * -     2     6     9
          * -   1
          */
-        val bST: TreeNode<Int>
+        val BST: TreeNode<Int>
             get() {
                 val root = TreeNode(7)
                 root.left = TreeNode(4)
@@ -105,7 +105,7 @@ class TreeNode<T>(
          * -      3   5   10
          *
          */
-        val cBT: TreeNode<Int>
+        val CBT: TreeNode<Int>
             get() {
                 val root = TreeNode(7)
                 root.left = TreeNode(4)
