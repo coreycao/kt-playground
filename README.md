@@ -1,6 +1,6 @@
 # KtPlayground
 
-Basic coding exercised using Kotlin, including basic data structures and algorithms, common design patterns, etc.
+Basic coding exercises using Kotlin, including basic **data structures** and **algorithms**, common **design patterns**, **LeetCode** solutions, etc.
 
 ### Content
 
@@ -13,6 +13,7 @@ Basic coding exercised using Kotlin, including basic data structures and algorit
 - [Backtrack](https://github.com/coreycao/KtPlayground/tree/main/src/main/kotlin/me/exercise/backtrack)
 - [Dynamic Planning](https://github.com/coreycao/KtPlayground/tree/main/src/main/kotlin/me/exercise/dynamicplan)
 - [Design Pattern](https://github.com/coreycao/KtPlayground/tree/main/src/main/kotlin/me/exercise/design)
-- [LeetCode](https://github.com/coreycao/KtPlayground/tree/main/src/main/kotlin/me/exercise/leetcode)
+- [LeetCode Solutions](https://github.com/coreycao/KtPlayground/tree/main/src/main/kotlin/me/exercise/leetcode)
+- [Concurrent](https://github.com/coreycao/KtPlayground/tree/main/src/main/kotlin/me/exercise/concurrent/coroutine)
 
 **Inspired by [THIS REPO](https://github.com/CaMnter/BasicExercises/).**
