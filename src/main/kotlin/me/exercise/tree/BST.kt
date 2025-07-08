@@ -13,10 +13,17 @@ package me.exercise.tree
  */
 
 fun main() {
+    /**
+     * -            7
+     * -        4       8
+     * -      3   5       10
+     * -     2     6     9
+     * -    1
+     */
     val BST = TreeNode.BST
 
     // 中序遍历可以按顺序访问 BST
-    inOrderTraversal(BST)
+    inOrderRecursive(BST)
 
     val target = 6
     // 6
@@ -25,7 +32,7 @@ fun main() {
 
     // 插入 11
     val BST_11 = insert(BST, 11)
-    inOrderTraversal(BST_11)
+    inOrderRecursive(BST_11)
 
 }
 
