@@ -1,6 +1,28 @@
 package me.exercise.tree
 
 import me.exercise.sort.swap
+import kotlin.math.pow
+
+/*
+ *        7
+ *    5       6
+ *  1   4   2
+ */
+fun main() {
+    val heap = Heap(6)
+    heap.insert(1)
+    heap.insert(2)
+    heap.insert(4)
+    heap.insert(5)
+    heap.insert(6)
+    heap.insert(7)
+
+    heap.print()
+
+    println("remove Top")
+    heap.removeTop()
+    heap.print()
+}
 
 /**
  * 堆是一种特殊的树：
@@ -19,6 +41,14 @@ import me.exercise.sort.swap
  * 向堆中插入新数据，并且调整数据的位置使其满足堆的特性，这个过程称之为“堆化”(heapify)
  *
  * 接下来的示例均以「大顶堆」为例来实现
+ *
+ * 堆排序：
+ * @see me.exercise.sort.heapSort
+ *  - 在一组连续数据上原地建堆
+ *  - 将堆顶元素与最后一个数据交换，堆的 size - 1，执行堆化
+ *  - 如此重复，直到堆中只剩一个数据
+ *  - 排序的过程中存在堆顶元素与最后一个叶子节点交换的操作，因此堆排序是不稳定排序算法
+ *
  */
 class Heap(val capacity: Int = 10) {
 
@@ -28,6 +58,23 @@ class Heap(val capacity: Int = 10) {
 
     // 堆中元素的数量
     private var count = 0
+
+    fun print(){
+        if (count == 0) {
+            println("EMPTY")
+            return
+        }
+        var level = 1
+        val output = StringBuilder()
+        for (i in 1..count) {
+            output.append(array[i].toString()).append(" ")
+            if (i.toDouble() == 2.0.pow(level.toDouble()) - 1) {
+                output.append("\n")
+                level++
+            }
+        }
+        println(output)
+    }
 
     /**
      * 向堆中插入数据
@@ -81,12 +128,12 @@ class Heap(val capacity: Int = 10) {
             var maxPos = cur
 
             // cur 小于其左孩子
-            if (cur * 2 < n && array[cur] < array[cur * 2]) {
+            if (cur * 2 <= n && array[cur] < array[cur * 2]) {
                 maxPos = cur * 2
             }
 
             // maxPos 小于右孩子
-            if (cur * 2 + 1 < n && array[maxPos] < array[cur * 2 + 1]) {
+            if (cur * 2 + 1 <= n && array[maxPos] < array[cur * 2 + 1]) {
                 maxPos = cur * 2 + 1
             }
 
