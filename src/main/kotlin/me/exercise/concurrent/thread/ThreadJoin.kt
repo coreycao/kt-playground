@@ -9,6 +9,7 @@ val threadA = Thread {
 
 val threadB = Thread {
     repeat(5) {
+        // 等待 threadA 完成
         threadA.join()
         println("${Thread.currentThread().name} $it")
         Thread.sleep(1000)
